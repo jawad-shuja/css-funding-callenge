@@ -4,40 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Funding</title>
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="./stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 </head>
 <body>
   <div class="box">
-    <div class="funding">
-      <div class="funding-progress">
-        <div class="progress-label">$167 still needed for this project</div>
-        <div class="progress-bar"></div>
-      </div>
-      <div class="funding-cta">
-        <div class="cta-text-remaining">
-          <p>
-            <span class="highlight">Only 3 days left</span> to fund this project.
-          </p>
-        </div>
-        <div class="cta-text-main">
-          <p>Join the 42 other donors who have already supported this project. Every dollar helps.</p>
-        </div>
-        <div class="cta-form">
-          <div class="form-input">
-            <span class="input-adornment">$</span>
-            <input class="input-field" type="number" name="amount" value="50"/>
+    <div class="campaign">
+      <div id="funding" data-total="300" data-funded="100" data-days="3" data-contributors="42">
+        <div class="funding-progress">
+          <div class="progress-label">
+            <span class="progress-remaining"></span> still needed for this project
           </div>
-          <button class="btn btn-cta">Give Now</button>
+          <div class="progress-bar" data-progress="0%"></div>
         </div>
-        <div class="cta-link">
-          <a href="">Why give $50?</a>
+        <div class="funding-cta">
+          <div class="cta-text-remaining">
+            <p>
+              <span class="highlight">Only <span class="days-remaining"></span> days left</span> to fund this project.
+            </p>
+          </div>
+          <div class="cta-text-main">
+            <p>Join the <span class="cta-contributors"></span> other donors who have already supported this project. Every dollar helps.</p>
+          </div>
+          <div class="cta-form-wrapper">
+            <form class="cta-from">
+              <div class="form-input">
+                <span class="input-adornment">$</span>
+                <input class="input-field" type="number" name="amount" value="50"/>
+              </div>
+              <button type="submit" class="btn btn-cta">Give Now</button>
+              <div class="cta-link">
+                <a href="">Why give $50?</a>
+              </div>
+            </form>
+          </div>
         </div>
+      </div>
+      <div class="actions">
+        <button class="btn btn-primary">Save for later</button>
+        <button class="btn btn-primary">Tell your friends</button>
       </div>
     </div>
-    <div class="actions">
-      <button class="btn btn-primary">Save for later</button>
-      <button class="btn btn-primary">Tell your friends</button>
+    <div class="celebration hidden">
+      Thank you! The goal has been acheived!
     </div>
   </div>
+  <script src="./javascripts/scripts.js"></script>
 </body>
 </html>
