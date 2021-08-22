@@ -1,5 +1,246 @@
 @import "compass/reset";
 
+$primary: #FFF;
+$secondary: rgb(242,94,52);
+$cta: rgb(0,190,28);
+$cta-grey: rgb(66,66,66);
+$text-secondary: rgb(242,94,52);
+$link-primary: rgb(0,160,214);
+
+body {
+  font-weight: 200;
+  color: #888;
+}
+
+body,
+button {
+  font-family: 'Mukta', sans-serif;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  line-height: 1.5rem;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.btn {
+  border: 1px solid rgb(221,221,221);
+  font-weight: 600;
+  padding: 0.8rem 0rem;
+  border-radius: 0.3rem;
+}
+
+.btn-primary:hover {
+  background-color: darken(rgb(250,250,250),2%);
+}
+
+.btn-primary {
+  background-color: rgb(250,250,250);
+  box-shadow: inset 0px -1px 0px 0px rgb(221,221,221);
+}
+
+.btn-cta:hover {
+  background-color: darken($cta, 2%);
+}
+
+.btn-cta {
+  border: 1px solid rgb(0,171,0);
+  font-weight: 600;
+  border-radius: 0.3rem;
+  background-color: $cta;
+  color: #FFF;
+  box-shadow: inset 0px -1px 0px 0px rgb(0,171,0);
+  font-size: 1.3rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
 .hidden {
   display: none;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 22rem;
+  @media screen and (max-width: 24rem) {
+    width: 90%;
+  }
+}
+
+.progress-label {
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.progress-label-text {
+  position: relative;
+  padding: 1rem;
+  text-align: center;
+  background-color: $cta-grey;
+  color: #FFF;
+  border-radius: 0.3rem;
+}
+
+.progress-label-arrow {
+  margin-left: 85%;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 9px solid $cta-grey;
+  margin-top: -1px;
+}
+
+.progress-remaining {
+  position: relative;
+}
+
+.progress-bar {
+  position: relative;
+  height: 1rem;
+  width: 100%;
+  background-color: rgb(250,250,250);;
+  border-bottom: 1px solid rgb(221,221,221);
+  box-shadow: inset 0px 2px 0px 0px rgb(246,245,245);
+}
+
+.progress-bar::after {
+  content: '';
+  position: absolute;
+  height: 1rem;
+  width: var(--bar-width);
+  background-color: $secondary;
+  box-sizing: border-box;
+  box-shadow: inset 0px 1px 0px 0px rgb(239,132,85);
+  border-right: 1px solid rgb(242,209,200);
+}
+
+.funding-cta {
+  position: relative;
+  border: 1px solid rgb(221,221,221);
+  border-bottom: 1px solid rgb(244,244,244);
+}
+
+.cta-content-wrapper {
+  padding: 1rem 1.5rem;
+  box-shadow: inset 0px -1px 0px 0px rgb(221,221,221);
+}
+
+.highlight {
+  position: relative;
+  color: $text-secondary;
+  font-weight: 600;
+}
+
+.cta-contributors {
+  position: relative;
+  font-weight: 600;
+}
+
+.cta-form-wrapper {
+  position: relative;
+}
+
+.cta-form {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  @media screen and (max-width: 24rem) {
+    flex-direction: column;
+  }
+}
+
+.form-input {
+  flex: 1;
+  margin-right: 2rem;
+  width: 100%;
+}
+
+form button {
+  flex: 1;
+  border: 0;
+  padding: 0;
+  @media screen and (max-width: 24rem) {
+    padding: 1.1rem;
+  }
+}
+
+#funding input {
+  position: relative;
+  padding: 0 0 0 1.6rem;
+  height: 3.5rem;
+  width: 100%;
+  font-weight: 600;
+  font-size: 1.3rem;
+  border: 1px solid #ddd;
+  border-radius: 0.2rem;
+  box-sizing: border-box;
+  box-shadow: inset 0px 2px 0px 0px rgb(250,250,250);
+  @media screen and (max-width: 24rem) {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+.input-adornment {
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-width: 2rem;
+  text-align: center;
+  border: 0;
+  padding: calc(1.1rem) 0px;
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  font-weight: 600;
+}
+
+.cta-link a {
+  text-decoration: none;
+  color: $link-primary;
+  font-style: italic;
+}
+
+.actions {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  @media screen and (max-width: 24rem) {
+    flex-direction: column;
+  }
+}
+
+.celebration {
+  font-size: 2rem;
+  position: relative;
+  text-align: center;
+  line-height: 2.5rem;
+}
+
+.actions button {
+  flex: 1;
+}
+
+.actions button:first-child {
+  margin-right: 2rem;
+  @media screen and (max-width: 24rem) {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
 }

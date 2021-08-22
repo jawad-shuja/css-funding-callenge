@@ -8,10 +8,9 @@ const initFundingBox = function(selector) {
   const contributorsElement = document.querySelector(`${selector} .cta-contributors`);
 
   const funding = fundingElement.dataset;
-  const bar = progressBarElement.dataset;
 
-  const total = funding.total;
-  const funded = funding.funded;
+  const total = parseFloat(funding.total);
+  const funded = parseFloat(funding.funded);
   if (funded >= total) {
     campaignElement.classList.add('hidden');
     celebrationElement.classList.remove('hidden');
@@ -23,10 +22,10 @@ const initFundingBox = function(selector) {
     const amountRemaining = total - funded;
 
     daysRemainingElement.innerHTML = days;
-    progressRemainingElement.innerHTML = amountRemaining;
+    progressRemainingElement.innerHTML = `$${amountRemaining}`;
     contributorsElement.innerHTML = contributors;
 
-    bar.progress = `${percentageReceived}%`;
+    progressBarElement.style.setProperty('--bar-width', `${percentageReceived}%`);
   }
 }
 
