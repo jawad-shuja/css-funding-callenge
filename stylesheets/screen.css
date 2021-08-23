@@ -255,7 +255,7 @@ strong {
 /* line 169, ../sass/screen.scss */
 .form-input {
   flex: 1;
-  margin-right: 2rem;
+  margin-right: 1.5rem;
   width: 100%;
 }
 
@@ -342,7 +342,7 @@ form button {
 
 /* line 240, ../sass/screen.scss */
 .actions button:first-child {
-  margin-right: 2rem;
+  margin-right: 1.5rem;
 }
 @media screen and (max-width: 24rem) {
   /* line 240, ../sass/screen.scss */

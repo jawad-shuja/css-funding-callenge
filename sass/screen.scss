@@ -168,7 +168,7 @@ strong {
 
 .form-input {
   flex: 1;
-  margin-right: 2rem;
+  margin-right: 1.5rem;
   width: 100%;
 }
 
@@ -238,7 +238,7 @@ form button {
 }
 
 .actions button:first-child {
-  margin-right: 2rem;
+  margin-right: 1.5rem;
   @media screen and (max-width: 24rem) {
     margin-right: 0;
     margin-bottom: 1rem;
