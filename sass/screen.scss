@@ -10,6 +10,10 @@ $link-primary: rgb(0,160,214);
 body {
   font-weight: 200;
   color: #888;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 body,
@@ -73,11 +77,8 @@ strong {
 }
 
 .box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 22rem;
+  margin: auto;
   @media screen and (max-width: 24rem) {
     width: 90%;
   }
