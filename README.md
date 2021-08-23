@@ -8,6 +8,8 @@ This repository contains the following:
 * SASS source files that can be compiled using the compass gem.
 * Responsive styles with basic variables and media queries.
 * Dynamic progress bar with JS for adding contributions.
+* Compass configuration to compile SASS to CSS.
+* HTML file to view the design.
 
 ## Setup instructions
 
