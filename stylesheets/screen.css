@@ -63,7 +63,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 10, ../sass/screen.scss */
+/* Variables */
+/* Elements */
+/* line 14, ../sass/screen.scss */
 body {
   font-weight: 200;
   color: #888;
@@ -73,16 +75,16 @@ body {
   justify-content: center;
 }
 
-/* line 19, ../sass/screen.scss */
+/* line 23, ../sass/screen.scss */
 body,
 button {
   font-family: 'Mukta', sans-serif;
-  letter-spacing: 0.5px;
-  word-spacing: 1px;
+  letter-spacing: 0.03125em;
+  word-spacing: 0.0625rem;
   line-height: 1.5rem;
 }
 
-/* line 27, ../sass/screen.scss */
+/* line 31, ../sass/screen.scss */
 button {
   background: none;
   color: inherit;
@@ -93,75 +95,102 @@ button {
   outline: inherit;
 }
 
-/* line 37, ../sass/screen.scss */
-.btn {
-  border: 1px solid #dddddd;
-  font-weight: 600;
-  padding: 0.8rem 0rem;
-  border-radius: 0.3rem;
-}
-
-/* line 44, ../sass/screen.scss */
-.btn-primary:hover {
-  background-color: whitesmoke;
-}
-
-/* line 48, ../sass/screen.scss */
-.btn-primary {
-  background-color: #fafafa;
-  box-shadow: inset 0px -1px 0px 0px #dddddd;
-}
-
-/* line 53, ../sass/screen.scss */
-.btn-cta:hover {
-  background-color: #00b41a;
-}
-
-/* line 57, ../sass/screen.scss */
-.btn-cta {
-  border: 1px solid #00ab00;
-  font-weight: 600;
-  border-radius: 0.3rem;
-  background-color: #00be1c;
-  color: #FFF;
-  box-shadow: inset 0px -1px 0px 0px #00ab00;
-  font-size: 1.3rem;
-}
-
-/* line 67, ../sass/screen.scss */
-.mb-1 {
-  margin-bottom: 1rem;
-}
-
-/* line 71, ../sass/screen.scss */
-.hidden {
-  display: none;
-}
-
-/* line 75, ../sass/screen.scss */
+/* line 41, ../sass/screen.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 79, ../sass/screen.scss */
+/* Margins */
+/* line 47, ../sass/screen.scss */
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+/* line 51, ../sass/screen.scss */
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+/* Components */
+/* line 57, ../sass/screen.scss */
+.hidden {
+  display: none;
+}
+
+/* line 61, ../sass/screen.scss */
+.highlight {
+  position: relative;
+  color: #f25e34;
+  font-weight: 600;
+}
+
+/* line 67, ../sass/screen.scss */
 .box {
   width: 22rem;
   margin: auto;
 }
 @media screen and (max-width: 24rem) {
-  /* line 79, ../sass/screen.scss */
+  /* line 67, ../sass/screen.scss */
   .box {
     width: 90%;
   }
 }
 
-/* line 87, ../sass/screen.scss */
+/* line 75, ../sass/screen.scss */
+.btn {
+  border: 0.0625rem solid #dddddd;
+  font-weight: 600;
+  padding: 0.8rem 0rem;
+  border-radius: 0.3rem;
+}
+
+/* line 82, ../sass/screen.scss */
+.btn-primary:hover {
+  background-color: whitesmoke;
+}
+
+/* line 86, ../sass/screen.scss */
+.btn-primary {
+  background-color: #fafafa;
+  box-shadow: inset 0rem -0.0625rem 0rem 0rem #dddddd;
+}
+
+/* line 91, ../sass/screen.scss */
+.btn-cta:hover {
+  background-color: #00b41a;
+}
+
+/* line 95, ../sass/screen.scss */
+.btn-cta {
+  border: 0.0625rem solid #00af1a;
+  font-weight: 600;
+  border-radius: 0.3rem;
+  background-color: #00be1c;
+  color: #FFF;
+  box-shadow: inset 0rem -0.0625rem 0rem 0rem #00af1a;
+  font-size: 1.3rem;
+}
+
+/* line 105, ../sass/screen.scss */
+form button {
+  flex: 1;
+  border: 0;
+  padding: 0;
+}
+@media screen and (max-width: 24rem) {
+  /* line 105, ../sass/screen.scss */
+  form button {
+    padding: 1.1rem;
+  }
+}
+
+/* line 114, ../sass/screen.scss */
 .progress-label {
   position: relative;
   margin-bottom: 0.5rem;
 }
 
-/* line 92, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 .progress-label-text {
   position: relative;
   padding: 1rem;
@@ -171,33 +200,33 @@ strong {
   border-radius: 0.3rem;
 }
 
-/* line 101, ../sass/screen.scss */
+/* line 128, ../sass/screen.scss */
 .progress-label-arrow {
   margin-left: 85%;
   width: 0;
   height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 9px solid #424242;
-  margin-top: -1px;
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-top: 0.6rem solid #424242;
+  margin-top: -0.0625rem;
 }
 
-/* line 111, ../sass/screen.scss */
+/* line 138, ../sass/screen.scss */
 .progress-remaining {
   position: relative;
 }
 
-/* line 115, ../sass/screen.scss */
+/* line 142, ../sass/screen.scss */
 .progress-bar {
   position: relative;
   height: 1rem;
   width: 100%;
   background-color: #fafafa;
-  border-bottom: 1px solid #dddddd;
-  box-shadow: inset 0px 2px 0px 0px #f6f5f5;
+  border-bottom: 0.0625rem solid #dddddd;
+  box-shadow: inset 0rem 0.125rem 0rem 0rem #f4f4f4;
 }
 
-/* line 124, ../sass/screen.scss */
+/* line 151, ../sass/screen.scss */
 .progress-bar::after {
   content: '';
   position: absolute;
@@ -205,75 +234,55 @@ strong {
   width: var(--bar-width);
   background-color: #f25e34;
   box-sizing: border-box;
-  box-shadow: inset 0px 1px 0px 0px #ef8455;
-  border-right: 1px solid #f2d1c8;
+  box-shadow: inset 0rem 0.0625rem 0rem 0rem #f58464;
+  border-right: 0.0625rem solid #f8aa94;
 }
 
-/* line 135, ../sass/screen.scss */
+/* line 162, ../sass/screen.scss */
 .funding-cta {
   position: relative;
-  border: 1px solid #dddddd;
-  border-bottom: 1px solid #f4f4f4;
+  border: 0.0625rem solid #dddddd;
+  border-bottom: 0.125rem solid #f7f7f7;
 }
 
-/* line 141, ../sass/screen.scss */
+/* line 168, ../sass/screen.scss */
 .cta-content-wrapper {
   padding: 1rem 1.5rem;
-  box-shadow: inset 0px -1px 0px 0px #dddddd;
+  box-shadow: inset 0rem -0.0625rem 0rem 0rem #dddddd;
 }
 
-/* line 146, ../sass/screen.scss */
-.highlight {
-  position: relative;
-  color: #f25e34;
-  font-weight: 600;
-}
-
-/* line 152, ../sass/screen.scss */
+/* line 173, ../sass/screen.scss */
 .cta-contributors {
   position: relative;
   font-weight: 600;
 }
 
-/* line 157, ../sass/screen.scss */
+/* line 178, ../sass/screen.scss */
 .cta-form-wrapper {
   position: relative;
 }
 
-/* line 161, ../sass/screen.scss */
+/* line 182, ../sass/screen.scss */
 .cta-form {
   position: relative;
   display: flex;
   justify-content: space-between;
 }
 @media screen and (max-width: 24rem) {
-  /* line 161, ../sass/screen.scss */
+  /* line 182, ../sass/screen.scss */
   .cta-form {
     flex-direction: column;
   }
 }
 
-/* line 170, ../sass/screen.scss */
+/* line 191, ../sass/screen.scss */
 .form-input {
   flex: 1;
   margin-right: 1.5rem;
   width: 100%;
 }
 
-/* line 176, ../sass/screen.scss */
-form button {
-  flex: 1;
-  border: 0;
-  padding: 0;
-}
-@media screen and (max-width: 24rem) {
-  /* line 176, ../sass/screen.scss */
-  form button {
-    padding: 1.1rem;
-  }
-}
-
-/* line 185, ../sass/screen.scss */
+/* line 197, ../sass/screen.scss */
 #funding input {
   position: relative;
   padding: 0 0 0 1.6rem;
@@ -281,20 +290,20 @@ form button {
   width: 100%;
   font-weight: 600;
   font-size: 1.3rem;
-  border: 1px solid #ddd;
+  border: 0.0625rem solid #ddd;
   border-radius: 0.2rem;
   box-sizing: border-box;
-  box-shadow: inset 0px 2px 0px 0px #fafafa;
+  box-shadow: inset 0rem 0.125rem 0rem 0rem #fafafa;
 }
 @media screen and (max-width: 24rem) {
-  /* line 185, ../sass/screen.scss */
+  /* line 197, ../sass/screen.scss */
   #funding input {
     width: 100%;
     margin-bottom: 1rem;
   }
 }
 
-/* line 202, ../sass/screen.scss */
+/* line 214, ../sass/screen.scss */
 .input-adornment {
   position: absolute;
   left: 0;
@@ -302,33 +311,33 @@ form button {
   min-width: 2rem;
   text-align: center;
   border: 0;
-  padding: calc(1.1rem) 0px;
+  padding: calc(1.1rem) 0rem;
   font-size: 1.3rem;
   line-height: 1.3rem;
   font-weight: 600;
 }
 
-/* line 215, ../sass/screen.scss */
+/* line 227, ../sass/screen.scss */
 .cta-link a {
   text-decoration: none;
   color: #00a0d6;
   font-style: italic;
 }
 
-/* line 221, ../sass/screen.scss */
+/* line 233, ../sass/screen.scss */
 .actions {
   position: relative;
   display: flex;
   justify-content: space-between;
 }
 @media screen and (max-width: 24rem) {
-  /* line 221, ../sass/screen.scss */
+  /* line 233, ../sass/screen.scss */
   .actions {
     flex-direction: column;
   }
 }
 
-/* line 230, ../sass/screen.scss */
+/* line 242, ../sass/screen.scss */
 .celebration {
   font-size: 2rem;
   position: relative;
@@ -336,18 +345,18 @@ form button {
   line-height: 2.5rem;
 }
 
-/* line 237, ../sass/screen.scss */
+/* line 249, ../sass/screen.scss */
 .actions button {
   flex: 1;
 }
 
-/* line 241, ../sass/screen.scss */
-.actions button:first-child {
+/* line 253, ../sass/screen.scss */
+.actions button:not(:last-child) {
   margin-right: 1.5rem;
 }
 @media screen and (max-width: 24rem) {
-  /* line 241, ../sass/screen.scss */
-  .actions button:first-child {
+  /* line 253, ../sass/screen.scss */
+  .actions button:not(:last-child) {
     margin-right: 0;
     margin-bottom: 1rem;
   }

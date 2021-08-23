@@ -1,11 +1,15 @@
 @import "compass/reset";
 
-$primary: #FFF;
+/* Variables */
+
+$primary: rgb(250,250,250);
 $secondary: rgb(242,94,52);
-$cta: rgb(0,190,28);
+$cta-green: rgb(0,190,28);
 $cta-grey: rgb(66,66,66);
-$text-secondary: rgb(242,94,52);
 $link-primary: rgb(0,160,214);
+$border-primary: rgb(221,221,221);
+
+/* Elements */
 
 body {
   font-weight: 200;
@@ -19,8 +23,8 @@ body {
 body,
 button {
   font-family: 'Mukta', sans-serif;
-  letter-spacing: 0.5px;
-  word-spacing: 1px;
+  letter-spacing: 0.03125em;
+  word-spacing: 0.0625rem;
   line-height: 1.5rem;
 }
 
@@ -34,46 +38,30 @@ button {
   outline: inherit;
 }
 
-.btn {
-  border: 1px solid rgb(221,221,221);
-  font-weight: 600;
-  padding: 0.8rem 0rem;
-  border-radius: 0.3rem;
+strong {
+  font-weight: bold;
 }
 
-.btn-primary:hover {
-  background-color: darken(rgb(250,250,250),2%);
-}
-
-.btn-primary {
-  background-color: rgb(250,250,250);
-  box-shadow: inset 0px -1px 0px 0px rgb(221,221,221);
-}
-
-.btn-cta:hover {
-  background-color: darken($cta, 2%);
-}
-
-.btn-cta {
-  border: 1px solid rgb(0,171,0);
-  font-weight: 600;
-  border-radius: 0.3rem;
-  background-color: $cta;
-  color: #FFF;
-  box-shadow: inset 0px -1px 0px 0px rgb(0,171,0);
-  font-size: 1.3rem;
-}
+/* Margins */
 
 .mb-1 {
   margin-bottom: 1rem;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+/* Components */
+
 .hidden {
   display: none;
 }
 
-strong {
-  font-weight: bold;
+.highlight {
+  position: relative;
+  color: $secondary;
+  font-weight: 600;
 }
 
 .box {
@@ -81,6 +69,45 @@ strong {
   margin: auto;
   @media screen and (max-width: 24rem) {
     width: 90%;
+  }
+}
+
+.btn {
+  border: 0.0625rem solid $border-primary;
+  font-weight: 600;
+  padding: 0.8rem 0rem;
+  border-radius: 0.3rem;
+}
+
+.btn-primary:hover {
+  background-color: darken($primary,2%);
+}
+
+.btn-primary {
+  background-color: $primary;
+  box-shadow: inset 0rem -0.0625rem 0rem 0rem $border-primary;
+}
+
+.btn-cta:hover {
+  background-color: darken($cta-green, 2%);
+}
+
+.btn-cta {
+  border: 0.0625rem solid darken($cta-green, 3%);
+  font-weight: 600;
+  border-radius: 0.3rem;
+  background-color: $cta-green;
+  color: #FFF;
+  box-shadow: inset 0rem -0.0625rem 0rem 0rem darken($cta-green, 3%);
+  font-size: 1.3rem;
+}
+
+form button {
+  flex: 1;
+  border: 0;
+  padding: 0;
+  @media screen and (max-width: 24rem) {
+    padding: 1.1rem;
   }
 }
 
@@ -102,10 +129,10 @@ strong {
   margin-left: 85%;
   width: 0;
   height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 9px solid $cta-grey;
-  margin-top: -1px;
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-top: 0.6rem solid $cta-grey;
+  margin-top: -0.0625rem;
 }
 
 .progress-remaining {
@@ -116,9 +143,9 @@ strong {
   position: relative;
   height: 1rem;
   width: 100%;
-  background-color: rgb(250,250,250);;
-  border-bottom: 1px solid rgb(221,221,221);
-  box-shadow: inset 0px 2px 0px 0px rgb(246,245,245);
+  background-color: $primary;;
+  border-bottom: 0.0625rem solid $border-primary;
+  box-shadow: inset 0rem 0.125rem 0rem 0rem lighten($border-primary, 9%);
 }
 
 .progress-bar::after {
@@ -128,25 +155,19 @@ strong {
   width: var(--bar-width);
   background-color: $secondary;
   box-sizing: border-box;
-  box-shadow: inset 0px 1px 0px 0px rgb(239,132,85);
-  border-right: 1px solid rgb(242,209,200);
+  box-shadow: inset 0rem 0.0625rem 0rem 0rem lighten($secondary, 10%);
+  border-right: 0.0625rem solid lighten($secondary, 20%);
 }
 
 .funding-cta {
   position: relative;
-  border: 1px solid rgb(221,221,221);
-  border-bottom: 1px solid rgb(244,244,244);
+  border: 0.0625rem solid $border-primary;
+  border-bottom: 0.125rem solid lighten($border-primary, 10%);
 }
 
 .cta-content-wrapper {
   padding: 1rem 1.5rem;
-  box-shadow: inset 0px -1px 0px 0px rgb(221,221,221);
-}
-
-.highlight {
-  position: relative;
-  color: $text-secondary;
-  font-weight: 600;
+  box-shadow: inset 0rem -0.0625rem 0rem 0rem $border-primary;
 }
 
 .cta-contributors {
@@ -173,15 +194,6 @@ strong {
   width: 100%;
 }
 
-form button {
-  flex: 1;
-  border: 0;
-  padding: 0;
-  @media screen and (max-width: 24rem) {
-    padding: 1.1rem;
-  }
-}
-
 #funding input {
   position: relative;
   padding: 0 0 0 1.6rem;
@@ -189,10 +201,10 @@ form button {
   width: 100%;
   font-weight: 600;
   font-size: 1.3rem;
-  border: 1px solid #ddd;
+  border: 0.0625rem solid #ddd;
   border-radius: 0.2rem;
   box-sizing: border-box;
-  box-shadow: inset 0px 2px 0px 0px rgb(250,250,250);
+  box-shadow: inset 0rem 0.125rem 0rem 0rem $primary;
   @media screen and (max-width: 24rem) {
     width: 100%;
     margin-bottom: 1rem;
@@ -206,7 +218,7 @@ form button {
   min-width: 2rem;
   text-align: center;
   border: 0;
-  padding: calc(1.1rem) 0px;
+  padding: calc(1.1rem) 0rem;
   font-size: 1.3rem;
   line-height: 1.3rem;
   font-weight: 600;
@@ -238,7 +250,7 @@ form button {
   flex: 1;
 }
 
-.actions button:first-child {
+.actions button:not(:last-child) {
   margin-right: 1.5rem;
   @media screen and (max-width: 24rem) {
     margin-right: 0;
